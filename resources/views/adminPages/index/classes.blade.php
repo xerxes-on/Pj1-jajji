@@ -41,6 +41,7 @@
                             <td>{{$data[$i]->capacity}}</td>
                             <td>{{$data[$i]->price}}</td>
                             <td>{{$data[$i]->age}}</td>
+                            <td><img src="/files/images/{{$data[$i]->img}}" alt=""></td>
                             <td>{{$data[$i]->created_at}}</td>
                             <td>{{$data[$i]->updated_at}}</td>
                             <td>

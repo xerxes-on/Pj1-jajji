@@ -21,7 +21,7 @@
         </div>
 
         <div class="table-data">
-            <form action="/admin/update/teachers/{{$data->id}}" method="post">
+            <form action="/admin/update/teachers/{{$data->id}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <label for="name">Name:</label>
@@ -36,8 +36,9 @@
                 <label for="email" required>E-mail:</label>
                 <input type="email" value="{{$data->email}}" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="example@web.com" name="email"><br>
 
-                {{--            <label for="img">Upload an image:</label>--}}
-                {{--            <input type="file" name="img" required><br><br>--}}
+                <label for="img">Upload an image:</label>
+                <input type="file" name="img" required><br><br>
+
                 <input type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 leading-6 text-white hover:bg-indigo-500  " value="Send" name="submit">
             </form>
         </div>

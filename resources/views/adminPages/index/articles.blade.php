@@ -39,6 +39,7 @@
                             <td>{{$data[$i]->title}}</td>
                             <td>{{$data[$i]->description}}</td>
                             <td>{{$data[$i]->author}}</td>
+                            <td><img src="/files/images/{{$data[$i]->img}}" alt=""></td>
                             <td>{{$data[$i]->created_at}}</td>
                             <td>{{$data[$i]->updated_at}}</td>
                             <td>

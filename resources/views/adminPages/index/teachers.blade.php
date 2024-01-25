@@ -40,6 +40,7 @@
                         <td>{{$data[$i]->role}}</td>
                         <td>{{$data[$i]->subject}}</td>
                         <td>{{$data[$i]->email}}</td>
+                        <td><img src="/files/images/{{$data[$i]->img}}" alt=""></td>
                         <td>{{$data[$i]->created_at}}</td>
                         <td>{{$data[$i]->updated_at}}</td>
                         <td>

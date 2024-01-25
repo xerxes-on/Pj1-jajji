@@ -29,18 +29,26 @@
                 <i class='bx bx-search' ></i>
                 <i class='bx bx-filter' ></i>
             </div>
-            <table>
-                @foreach ($columnNames as $column)
-                    <th style='font-size: 20px;'> {{$column}} </th>
-                @endforeach
-                <tr>
-                @foreach($data[0] as $d)
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="/files/images/{{$data[0]->img}}"  class="rounded-circle">
+            </div>
+            <div class="lightbox d-inline-block w-25">
+                <ul>
+                    @foreach ($columnNames as $column)
+                        <li style='font-size: 20px; color: #0f3460'> {{$column}}: </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="lightbox d-inline-block">
+                <ul>
+                    @foreach($data[0] as $d)
+                        <li style='font-size: 20px;'>{{$d}}</li>
+                    @endforeach
+                </ul>
+            </div>
 
-                        <td>{{$d}}</td>
 
-                @endforeach
-                </tr>
-            </table>
+
         </div>
     </div>
 </main>

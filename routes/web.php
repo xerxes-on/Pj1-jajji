@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('admin') ->name('admin')->group(function (){
-    Route::get('/', [PageController::class, 'index']);
+    Route::get('/', function (){
+        return view('adminPages.index.home');
+    });
 
     Route::get('index/{page}', [MainController::class, 'index']);
 

@@ -21,7 +21,7 @@
         </div>
 
         <div class="table-data">
-            <form action="/admin/update/classes/{{$data->id}}" method="post">
+            <form action="/admin/update/classes/{{$data->id}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <label  for="groupName">Group name:</label>
@@ -41,8 +41,8 @@
                 <input type="number" value="{{$data->age}}" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="3-4" name="age"><br>
 
 
-                {{--            <label for="img" required>IMG:</label>--}}
-                {{--            <input type="file" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="img"><br>--}}
+                            <label for="img" required>IMG:</label>
+                            <input type="file" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="img"><br>
 
 
                 <input type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 leading-6 text-white hover:bg-indigo-500  "  value="Send" name="submit">
