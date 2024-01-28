@@ -24,17 +24,17 @@
         <form action="store/articles" method="post" enctype="multipart/form-data">
             @csrf
             <label for="title">Title:</label>
-            <input type="text"class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="title" placeholder="Main News"><br>
+            <input type="text" value="{{old('title')}}" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="title" placeholder="Main News"><br>
 
             <label for="description" >Description:</label>
-            <input type="text" name="description" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="Blah blah blah..."><br>
+            <input type="text" value="{{old('description')}}" name="description" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="Blah blah blah..."><br>
 
             <label for="img">Upload an image:</label>
-            <input type="file" name="img" required><br><br>
+            <input type="file" name="img"><br><br>
 
 
             <label for="author" required>Author:</label>
-            <input type="text" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="John Doe" name="author"><br>
+            <input type="text" value="{{old('author')}}" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="John Doe" name="author"><br>
 
             <input type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 leading-6 text-white hover:bg-indigo-500  " value="Send" name="submit">
         </form>

@@ -24,24 +24,24 @@
         <form action="store/classes" method="post" enctype="multipart/form-data">
             @csrf
             <label  for="groupName">Group name:</label>
-            <input type="text" class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="name" placeholder="CF-2"><br>
+            <input type="text" value="{{old('name')}}" class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="name" placeholder="CF-2"><br>
 
             <label for="description" >Description:</label>
-            <input type="text" name="description" class="w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="Students who is  into IT.."><br>
+            <input type="text" value="{{old('description')}}" name="description" class="w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="Students who is  into IT.."><br>
 
             <label for="capacity" required>Capacity:</label>
-            <input type="number"class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="20" name="capacity"><br>
+            <input type="number" value="{{old('capacity')}}" class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="20" name="capacity"><br>
 
 
             <label for="price" required>Price:</label>
-            <input type="number"class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="250 000" name="price"><br>
+            <input type="number" value="{{old('price')}}" class=" w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="250 000" name="price"><br>
 
             <label for="ages" required>Ages:</label>
-            <input type="number"class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="3-4" name="age"><br>
+            <input type="number" value="{{old('ages')}}" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " placeholder="3-4" name="age"><br>
 
 
-            <label for="img" required>IMG:</label>
-            <input type="file" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2 " name="img"><br>
+            <label for="img" >IMG:</label>
+            <input type="file" class="block w-full rounded-md border-0 py-1.5  ring-1 ring-inset ring-gray-300 focus:ring-2" name="img"><br>
 
 
             <input type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 leading-6 text-white hover:bg-indigo-500  "  value="Send" name="submit">

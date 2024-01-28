@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 
+
+use Illuminate\Support\Facades\Validator;
+
+
 class MainController extends Controller
 {
 
@@ -27,10 +31,12 @@ class MainController extends Controller
 
 
     public function store(Request $request, $page){
+        $request->validate([
+            'img'=>'required|type:jpg,phg,svg,jpeg|max:2048'
+        ]);
         $storing = $request->all();
         $columnNames = Schema::getColumnListing($page);
         $inserting = [];
-//        image handling
         $file = $request->file('img');
         $fileName  = time() .'-'. $file->getClientOriginalName();
         $file->move('files/images' , $fileName);
@@ -99,4 +105,11 @@ class MainController extends Controller
 
     }
 
+    public function messages()
+    {
+        return [
+            'required' => 'Gimme :attribute u lil wore.',
+            'max' => 'Dude :attribute  must be less than :max chars, every time man.',
+        ];
+    }
 }

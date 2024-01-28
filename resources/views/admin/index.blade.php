@@ -113,6 +113,18 @@
     </nav>
 
 {{--    Content here--}}
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <span><b>wtf dude</b> look closer man. Here: </span>
+            <br><br>
+            <ul>
+                @foreach($errors->all() as $e)
+                    <li>{{$e}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
 
     @yield('adminContent')
 
